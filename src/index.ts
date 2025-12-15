@@ -6,9 +6,11 @@ const server = new McpServer({
   version: "1.0.0",
 });
 
-server.tool("hello", "A tool that just returns hello", {}, () => {
+const name = process.env["NAME"] ?? "world";
+
+server.tool("hello", "A tool that just returns hello with NAME", {}, () => {
   return {
-    content: [{ type: "text", text: "hello" }],
+    content: [{ type: "text", text: `hello ${name}` }],
   };
 });
 

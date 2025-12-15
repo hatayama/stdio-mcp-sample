@@ -38,7 +38,10 @@ Add to your `~/.cursor/mcp.json`:
   "mcpServers": {
     "hello-mcp": {
       "command": "node",
-      "args": ["/path/to/stdio-mcp-sample/dist/index.js"]
+      "args": ["/path/to/stdio-mcp-sample/dist/index.js"],
+      "env": {
+        "NAME": "YourName"
+      }
     }
   }
 }
@@ -53,17 +56,26 @@ Add to your Claude Desktop config:
   "mcpServers": {
     "hello-mcp": {
       "command": "node",
-      "args": ["/path/to/stdio-mcp-sample/dist/index.js"]
+      "args": ["/path/to/stdio-mcp-sample/dist/index.js"],
+      "env": {
+        "NAME": "YourName"
+      }
     }
   }
 }
 ```
 
+## Environment Variables
+
+| Variable | Description                              | Default |
+| -------- | ---------------------------------------- | ------- |
+| `NAME`   | Name to include in the hello message     | `world` |
+
 ## Available Tools
 
-| Tool    | Description                    |
-| ------- | ------------------------------ |
-| `hello` | A tool that just returns hello |
+| Tool    | Description                              |
+| ------- | ---------------------------------------- |
+| `hello` | Returns "hello {NAME}" (default: "hello world") |
 
 ## Scripts
 
