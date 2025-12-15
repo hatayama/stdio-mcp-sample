@@ -1,0 +1,49 @@
+{
+  "name": "ts-cli-template",
+  "version": "0.0.1",
+  "description": "TypeScript CLI template project",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "ts-cli-template": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "allow-scripts": "allow-scripts"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "cli",
+    "typescript",
+    "template"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "9.39.2",
+    "@lavamoat/allow-scripts": "3.4.1",
+    "@types/node": "25.0.2",
+    "esbuild": "0.27.1",
+    "eslint": "9.39.2",
+    "globals": "16.5.0",
+    "prettier": "3.7.4",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.49.0"
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "$root$": false,
+      "esbuild": true
+    }
+  }
+}
