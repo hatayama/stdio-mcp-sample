@@ -1,11 +1,11 @@
 {
-  "name": "ts-cli-template",
+  "name": "stdio-mcp-sample",
   "version": "0.0.1",
-  "description": "TypeScript CLI template project",
+  "description": "Minimal MCP server sample with stdio transport",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "ts-cli-template": "dist/index.js"
+    "stdio-mcp-sample": "dist/index.js"
   },
   "files": [
     "dist"
@@ -28,6 +28,9 @@
   ],
   "author": "",
   "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.12.0"
+  },
   "devDependencies": {
     "@eslint/js": "9.39.2",
     "@lavamoat/allow-scripts": "3.4.1",
