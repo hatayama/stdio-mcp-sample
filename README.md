@@ -1,18 +1,12 @@
-# ts-cli-template
+# stdio-mcp-sample
 
-TypeScript CLI template project with modern tooling.
+Minimal MCP (Model Context Protocol) server sample with stdio transport.
 
 ## Features
 
-- TypeScript with strict mode
-- ESM (ECMAScript Modules)
-- ESLint 9 with flat config
-- Prettier for code formatting
-- tsup for bundling
-- release-please for automated releases
-- @lavamoat/allow-scripts for supply chain security
-- Dependabot for dependency updates
-- GitHub Actions CI/CD
+- Minimal MCP server implementation
+- stdio transport for easy integration
+- `hello` tool that returns "hello"
 
 ## Requirements
 
@@ -21,43 +15,65 @@ TypeScript CLI template project with modern tooling.
 
 ## Getting Started
 
-1. Click "Use this template" on GitHub to create a new repository
-2. Clone your new repository
-3. Install dependencies:
+1. Install dependencies:
 
 ```bash
 pnpm install
-pnpm allow-scripts
 ```
 
-4. Update `package.json` with your project details:
-   - `name`
-   - `description`
-   - `author`
-   - `bin` (rename the CLI command)
+2. Build:
 
-5. Start developing in `src/index.ts`
+```bash
+pnpm build
+```
+
+## Usage
+
+### With Cursor
+
+Add to your `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "hello-mcp": {
+      "command": "node",
+      "args": ["/path/to/stdio-mcp-sample/dist/index.js"]
+    }
+  }
+}
+```
+
+### With Claude Desktop
+
+Add to your Claude Desktop config:
+
+```json
+{
+  "mcpServers": {
+    "hello-mcp": {
+      "command": "node",
+      "args": ["/path/to/stdio-mcp-sample/dist/index.js"]
+    }
+  }
+}
+```
+
+## Available Tools
+
+| Tool    | Description                    |
+| ------- | ------------------------------ |
+| `hello` | A tool that just returns hello |
 
 ## Scripts
 
-| Command              | Description                 |
-| -------------------- | --------------------------- |
-| `pnpm build`         | Build the project           |
-| `pnpm lint`          | Run ESLint                  |
-| `pnpm lint:fix`      | Run ESLint with auto-fix    |
-| `pnpm format`        | Format code with Prettier   |
-| `pnpm format:check`  | Check code formatting       |
-| `pnpm allow-scripts` | Run allowed install scripts |
-
-## Security
-
-This template implements supply chain attack prevention:
-
-- **ignore-scripts**: Disables automatic script execution during install
-- **@lavamoat/allow-scripts**: Explicitly controls which packages can run install scripts
-- **Dependabot**: Automated weekly security updates
-- **Security audit CI**: Runs `pnpm audit`, `lockfile-lint`, and OSV-Scanner on every PR
-- **Pinned versions**: All dependencies use exact versions
+| Command             | Description               |
+| ------------------- | ------------------------- |
+| `pnpm build`        | Build the project         |
+| `pnpm lint`         | Run ESLint                |
+| `pnpm lint:fix`     | Run ESLint with auto-fix  |
+| `pnpm format`       | Format code with Prettier |
+| `pnpm format:check` | Check code formatting     |
 
 ## License
 
