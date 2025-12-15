@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.2](https://github.com/hatayama/stdio-mcp-sample/compare/stdio-mcp-sample-v0.0.1...stdio-mcp-sample-v0.0.2) (2025-12-15)
+
+
+### Features
+
+* add minimal MCP server with hello tool ([5f19a66](https://github.com/hatayama/stdio-mcp-sample/commit/5f19a662efcde4f1ca11c56265e8c948a20bf0e3))
+* add NAME env variable support ([16de875](https://github.com/hatayama/stdio-mcp-sample/commit/16de875a76511883dde97ebd68f2046d236c1b85))
+
 ## 0.0.1 (2025-12-14)
 
 

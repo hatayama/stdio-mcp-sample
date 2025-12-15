@@ -1,6 +1,6 @@
 {
   "name": "stdio-mcp-sample",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Minimal MCP server sample with stdio transport",
   "type": "module",
   "main": "dist/index.js",
